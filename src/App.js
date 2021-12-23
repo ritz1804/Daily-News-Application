@@ -11,14 +11,15 @@ function App() {
   const [loadMore, setLoadMore] = useState(20);
   const [category, setCategory] = useState("general");
 
+  const apiKey = "d697e969514c4aa98744e2052da689c5";
+
   console.log(process.env);
 
   const newsApi = async () => {
     try {
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
       const news = await axios.get(
-        `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadMore}&category=${category}`
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&pageSize=${loadMore}&category=${category}`
       );
       // console.log(news);
       setNewsArray(news.data.articles);
@@ -44,7 +45,7 @@ function App() {
           setLoadMore={setLoadMore}
         />
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
