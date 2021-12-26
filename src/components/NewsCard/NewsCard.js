@@ -27,7 +27,7 @@ const NewsCard = ({ newsItem }) => {
           <br />
           <span className="author">
             <a href={newsItem.url} target="__blank">
-              <b>short </b>
+              <b>short  </b>
             </a>{" "}
             <span className="muted">
               {" "}

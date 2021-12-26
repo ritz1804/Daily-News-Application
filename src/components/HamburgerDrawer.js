@@ -19,6 +19,8 @@ import {
 } from "@material-ui/core"; // added
 
 import categories from "../data/category";
+import countries from "../data/countries";
+import sortby from "../data/sortby";
 
 const useStyles = makeStyles({
   list: {
@@ -31,7 +33,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SwipeableTemporaryDrawer({ setCategory }) {
+export default function SwipeableTemporaryDrawer({ setCategory, setCountry, setSortby}) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -82,6 +84,38 @@ export default function SwipeableTemporaryDrawer({ setCategory }) {
             style={{ height: 40, borderRadius: 3 }}
             button
             onClick={() => setCategory(text)}
+            key={text}
+          >
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <List>
+        <ListItem>Countries</ListItem>
+      </List>
+      <Divider />
+      <List>
+        {countries.map((text, index) => (
+          <ListItem
+            style={{ height: 40, borderRadius: 3 }}
+            button
+            onClick={() => setCountry(text)}
+            key={text}
+          >
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <List>
+        <ListItem>Sort By</ListItem>
+      </List>
+      <Divider />
+      <List>
+        {sortby.map((text, index) => (
+          <ListItem
+            style={{ height: 40, borderRadius: 3 }}
+            button
+            onClick={() => setSortby(text)}
             key={text}
           >
             <ListItemText primary={text} />

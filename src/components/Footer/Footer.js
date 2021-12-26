@@ -4,9 +4,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <span className="name">
+      <h1 className="name">
         Daily News Application 
-      </span>
+      </h1>
     </div>
   );
 };
