@@ -46,19 +46,18 @@ class Clock extends React.Component {
       <div className="display">
 
         <div className="date"> 
-          <span>{day}</span>        
-          <span>{month}</span>
-          <span>{date}</span>
-          <span>{year}</span>
+          <span className='day'>{day}</span>        
+          <span className='month'>{month}</span>
+          <span className='today'>{date}</span>
+          <span className='year'>{year}</span>
         </div>
 
-      
         <div className="clock">        
           <span className="clock-element-main">{hour}</span>
           <span className="clock-element-colon">:</span>
-          <span className="clock-element-main">{minute}</span>
+          <span className="clock-element-main-1">{minute}</span>
           <span className="clock-element-colon">:</span>
-          <span className="clock-element-main">{second}</span>
+          <span className="clock-element-main-2">{second}</span>
           <span className="clock-element-ampm">{ampm}</span>
         </div>
         {/*<div className="clock-labels">

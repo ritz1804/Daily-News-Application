@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import './styles.css';
 
 // let moonmoji = require('moonmoji')();
 
@@ -115,18 +116,18 @@ class Weather extends React.Component {
       return (
         <div className="weather">   
           <div>
-            <span className="weather-item">{this.state.city}</span> 
-            <p className="weather-item">
+            <p className="city">{this.state.city}</p> 
+            <p className="temp">
               {this.state.temperatureC} &deg;C 
-              <span className="slash">/</span>
+              <span className="slash"> / </span>
               <span>{this.state.temperatureF} &deg;F</span>
             </p>            
-            <p className="weather-item">Humidity: {this.state.humidity}%</p>
-            <p className="weather-item">{this.state.description}</p>
+            <p className="humidity">Humidity: {this.state.humidity}%</p>
+            <p className="desc">{this.state.description}</p>
           </div>         
           <div>
-            <p className="weather-item">Sunrise: {this.state.sunrise}</p>
-            <p className="weather-item">Sunset: {this.state.sunset}</p>
+            <p className="sunrise">Sunrise: {this.state.sunrise}</p>
+            <p className="sunset">Sunset: {this.state.sunset}</p>
             
           </div>       
           

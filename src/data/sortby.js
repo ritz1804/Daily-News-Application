@@ -3,5 +3,5 @@ const sortby = [
     "popularity",
     "publishedAt",
   ];
-  export default sortby;
-  
+
+ export default sortby;  

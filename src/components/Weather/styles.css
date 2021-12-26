@@ -2,6 +2,68 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.row1 span {
-  padding-left: 4%;
+.month, .today, .year {
+  padding-left: 2%;
+}
+
+.clock-element-colon, .clock-element-main-1, .clock-element-main-2, .clock-element-ampm {
+  padding-left: 1%;
+}
+
+.date, .clock {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.weather {
+  font-family: 'Poppins', sans-serif;
+}
+
+.weather .city{
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.weather .city {
+  margin: 0;
+  padding-top: 5%;
+}
+
+.weather .temp {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 900;
+}
+
+.weather .humidity {
+  margin: 0;
+  padding-top: 2%;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.weather .desc {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.weather .desc:first-letter {
+  text-transform: capitalize;
+}
+
+.weather .sunrise{
+  margin: 0;
+  padding-top: 5%;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.weather .sunset {
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Inconsolata', monospace;
 }
