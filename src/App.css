@@ -26,6 +26,10 @@ a:active {
   .main-content {
     display: block; 
   }
+
+  .news-block {
+    width: 100%;
+  }
   .weather-block {
     top: 0;
     left: 0;

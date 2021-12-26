@@ -18,13 +18,18 @@ function App() {
   const apiKey = "d697e969514c4aa98744e2052da689c5";
 
   // console.log(process.env);
-
   const newsApi = async () => {
     try {
-
-      const news = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}&pageSize=${loadMore}&category=${category}`
-      );
+      if(keyword.length !== 0) {
+        var news = await axios.get(
+          `https://newsapi.org/v2/top-headlines?q=${keyword}&apiKey=${apiKey}&pageSize=${loadMore}`
+        );
+      }
+      else {
+        var news = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}&pageSize=${loadMore}&category=${category}`
+        );
+      }
       // console.log(news);
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);
@@ -41,8 +46,15 @@ function App() {
   return (
     <div className="App" id="#home">
       <NavInshort setCategory={setCategory} setCountry={setCountry} setSortby={setSortby}/>
-      {/* <input onChange={event => setKeyword(event.target.value)} />
-      {console.log(keyword)} */}
+      <input onChange={event => setKeyword(event.target.value)} />
+      {console.log(keyword)}
+      <button
+        className=""
+        onClick={() => {newsApi()}}
+        key={keyword}
+      >
+        Search
+      </button>
       <div className="main-content">
         <div className="news-block">
         {newsResults && (
