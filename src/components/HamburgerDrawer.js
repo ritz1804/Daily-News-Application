@@ -95,14 +95,14 @@ export default function SwipeableTemporaryDrawer({ setCategory, setCountry, setS
       </List>
       <Divider />
       <List>
-        {countries.map((text, index) => (
+        {Object.entries(countries).map(([key,value]) => (
           <ListItem
             style={{ height: 40, borderRadius: 3 }}
             button
-            onClick={() => setCountry(text)}
-            key={text}
+            onClick={() => setCountry(key)}
+            key={value}
           >
-            <ListItemText primary={text} />
+            <ListItemText primary={value} />
           </ListItem>
         ))}
       </List>

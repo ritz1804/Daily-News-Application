@@ -1,7 +1,7 @@
 const sortby = [
-    "relevancy",
-    "popularity",
-    "publishedAt",
+    "Relevancy",
+    "Popularity",
+    "PublishedAt",
   ];
 
  export default sortby;  

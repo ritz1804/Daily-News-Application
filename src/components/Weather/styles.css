@@ -67,3 +67,13 @@
   font-size: 25px;
   font-family: 'Inconsolata', monospace;
 }
+
+@media (max-width: 900px) {
+  .display {
+    padding-top: 5%;
+  }
+
+  .weather {
+    padding-bottom: 5%;
+  }
+}

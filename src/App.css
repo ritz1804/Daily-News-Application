@@ -46,6 +46,19 @@ a:active {
   font-weight: 500;
 }
 
+.MuiList-padding {
+  font-family: 'Poppins';
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.ham span{
+  font-family: 'Inconsolata';
+}
+.MuiTypography-displayBlock span{
+  
+}
+
 @media (max-width: 900px) {
   .main-content {
     display: block; 
